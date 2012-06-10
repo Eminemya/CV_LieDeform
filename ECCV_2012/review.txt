@@ -1,0 +1,51 @@
+Themes
+======
+* Related Work: R2/R3
+* Algorithm: unexplored external preprocessing step (clustering/Optical Flow)  R1/R2/R3
+* Experiments: Exp2 is weak  R3
+*********************************
+R1:
+1) Unexplored 
+a) (clustering) The performance however seems to rely on the similarity between the clusters found. It would be interesting to see how sensitive the method is with respect to the underlying cluster structure. 
+Information about the number of clusters determined by cross-validation for the experiments and an idea about runtime estimates would also enhance the paper. 
+
+2) Minor:
+a) Figure: would recommend to split Figure 3 into two graphs, one for pix and one for sob and plot them in a similar layout to Figure 5. This would give additional space to provide more insight into the limitations of the method. 
+*********************************
+R2: 
+1) Related Work:
+Listed references are not indicative of all related methods in the field:
+a) Thin-Plate-Spline models (Bookstein)
+b) polynomial and meshless models (see Liu and Ribeiro for instance)
+c) Log-Eucliden metric where operations on tensor form Lie Group (Arsigny, et al.)
+d) Need a reference on clustering (l. 256) 
+
+2) Unexplored 
+a) (clustering) Implementation is a bit ad-hoc, such as requiring selection of "standard cluster".Authors should include results on how the choice of the "standard cluster" effects recognition rates. Deformation fields will tend to differ depending on choice of cluster, hence impacting the learned bases.
+
+3) Minor:
+a) Very few of the technical details, as it pertains to how this method was derived, are expanded up on in the paper. 
+
+*********************************
+R3:
+1) Related Work:
+Unclear about the type of deformation to model:
+a) (degree of deformation) The paper should expand on the types of image deformations that adhere to the authors' assumptions, as well as the ones which do not. The discussion clearly implies there is a performance trade-offs between how well local deformations of one exemplar can be transformed to equivalent local deformations of another exemplar. Presumably the local deformations can only be so large before this assumption breaks down? 
+b) (3D deformation) The paper appears to have an implicit assumption about the range of image deformations that are allowed/able to be handled. The authors should describe what types of transforms are diffeomorphic. For instance, occlusions created through out of plane rotation of a 3D object would presumably create discontinuities in an image mesh? 
+
+2) Unexplored:
+a) (clustering) What happens if the estimated number of exemplars is too large or too small? Presumably there is a trade-off between the number of unconstrained large deformations between exemplars and the assumption that the local deformations among a single exemplar can be transformed to the other exemplars? 
+b) (optical flow) How dependent is the method on good, smooth optical flow results?
+
+3) Experiments:
+a) (Bad Face Reconstruction) The experimental results do not clearly illustrate the benefit of the proposed method. The paper motivates deformation modeling to improve the results of classification, but only the first experiment shows this. The second experiment examines reconstruction error, but the paper points out that the "images are small and most reconstruction errors are not human detectable". It is not clear whether that statement applies to all algorithms, or just the proposed one. In either case, showing an improvement on face recognition would be much more compelling. 
+b) (No lighting) Furthermore, the experiments do not address the issue of non-deformable appearance variation from changes in lighting, for instance. In many real situations, both lighting and shape will change, and a convincing experiment would show that the more powerful deformation modeling is able to boost the performance of less complex methods which also consider other aspects, such as lighting. 
+
+
+4) Minor:
+a) Although V is part of a K dimension algebra, the actual size is the number of pixels cross K. 
+b) What distance measure was used to gauge exemplars in the K mediod algorithm?
+c) What does the "number of local components" imply?
+d) Typo:
+397 - "the the" 
+440 - "Rahter"  

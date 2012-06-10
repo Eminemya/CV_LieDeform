@@ -1,0 +1,20 @@
+load mnist_all
+addpath('mex');
+
+% load the two frames
+im1 = reshape(train7(1,:),28,28);
+im2 = reshape(train7(2,:),28,28);
+
+% set optical flow parameters (see Coarse2FineTwoFrames.m for the definition of the parameters)
+alpha = 1;
+ratio = 0.5;
+minWidth = 10;
+nOuterFPIterations = 7;
+nInnerFPIterations = 1;
+nSORIterations = 30;
+
+para = [alpha,ratio,minWidth,nOuterFPIterations,nInnerFPIterations,nSORIterations];
+
+[vx,vy,warpI2] = Coarse2FineTwoFrames(im1,im2,para);
+
+figure;subplot(1,3,1);imagesc(im1');subplot(1,3,2);imagesc(warpI2');subplot(1,3,3);imagesc(im2');

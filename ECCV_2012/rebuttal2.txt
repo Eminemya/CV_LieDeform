@@ -1,0 +1,18 @@
+We thank the reviewers for their detailed and very helpful comments.
+
+As all the reviewers point out, the quality of examplars found by clustering algorithm will be sensative to the choice of the algorithm and the density of examplars.
+In our first experiment for MNIST digit classification, we actually tried several different classical clustering algorithms and varied the density of examplars. 
+Empirically, we found that with reasonable (*need quantitative number*) density of examplar, the classification performance of our Deformation Manifold built from examplars found by Kmedoid,Kmeans and Hierarchical Clustering methods is similar (*need quantitative number*). Since finding examplar is only a preprocession step for our deformation model, we directly use the reasonable setting instead of elaborating it to push up the overall performance. Also due to the limited space, we intentionally chose not to describe the cross-validation step to choose the setting in detail.
+
+As R2 points out, Bookstein's Then-Plate Spline deformation model and Liu and Ribeiro's meshless deformation model are related in terms of the idea of the decomposition of deformation. Notice that the idea of using Lie Algebra to represent deformation is not new. Besides the methods we reviewed in the draft, Arsigny et al., proposed by R2, describes the log Euclidean metric where operations form Lie group. We are happy to cite these papers but none of them explored the idea proposed by our draft.
+In terms of the technical detail concerned by R2, we used the standard notation to formulate the model in section 4. We omitted further details since the derivation is straight-forward in the literature.
+
+In response to R3's question on our assumption of deformation, in this work we constrain ourselves to 2D deformation model while assuming simple appearance model. For 2D deformation model, we learn a pool of deformation basis (2D vector field) each of which corresponds to a diffeomorphism function on the image. The 3D deformation and the lighting change in appearance model mentioned by R3 are out of the scope of this draft. 
+In the second experiment, we showed the quantitive improvement for face reconstruction on a standard face dataset widely used in manifold learning literature. Due to the low resolution of the data, it's hard to show clear difference among results produced by different algorithms. We agree with R3 that we need to incorporate elaborated appearance model to have more compelling face reconstruction result on other finer data.
+Similar to the choice of clustering setting for finding examplar, the setting for optical flow is empirically found after trying several different state-of-the-art packages. Due to the simple appearance model we are currently using, we empirically find optical flow not a bottleneck for the performance of our deformation model for our tasks.
+Also, we'd like to clarify some confusions due to bad wording:
+* In K-medoid algorithm, we use L2 norm which gives reasonable result empirically
+* For the labels of x-axis in figure 3 and figure 5, "number of local component" should be number of training examples. Also, the x-axis of the rightmost data points should be the average size of the original training data per digit (~6000) instead of 10,000.
+
+Last but not the least ,we thank all reviewers for their kind suggestions on typos and figure format for clearer presentation.
+

@@ -1,0 +1,28 @@
+Workarounds in use with MATLAB
+-------------------------------
+
+1. For Linux, one should use gcc & g++ (of version 4.5 or above)
+
+add following to CXXFLAGS in mexopts.sh
+
+-std=c++0x -Wall -D__STDC_UTF_16__ 
+
+
+2. For MacOSX, one should use clang & clang++, instead of gcc to build mex files.
+
+And, for standard library, one should use libc++ instead of libstdc++
+
+Several modifications should be made to the corresponding section in mexopts.sh:
+
+for C part:
+CC=clang
+
+for C++ part:
+CXX=clang++  (make sure that clang++ of version above 2.8 is used here)
+CLIBS="$CLIBS -lc++"
+
+CXXFLAGS="-std=c++0x -stdlib=libc++ -D__STDC_UTF_16__ -U__STRICT_ANSI__ -fno-common -fexceptions -arch $ARCHS -isysroot $SDKROOT"
+CXXLIBS="$MLIBS -lc++"
+
+
+

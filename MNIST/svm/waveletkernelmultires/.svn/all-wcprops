@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/sanskrit/!svn/ver/29/code/getFeature/waveletkernelmultires
+END
+backfitting.m
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/sanskrit/!svn/ver/29/code/getFeature/waveletkernelmultires/backfitting.m
+END
+CreateMultiLevelKernel.m
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/sanskrit/!svn/ver/29/code/getFeature/waveletkernelmultires/CreateMultiLevelKernel.m
+END
+TestWaveletKernel.m
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/sanskrit/!svn/ver/29/code/getFeature/waveletkernelmultires/TestWaveletKernel.m
+END
+backfittingval.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/sanskrit/!svn/ver/29/code/getFeature/waveletkernelmultires/backfittingval.m
+END
+exrealframetest.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/sanskrit/!svn/ver/29/code/getFeature/waveletkernelmultires/exrealframetest.m
+END
+exsimulframetest.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/sanskrit/!svn/ver/29/code/getFeature/waveletkernelmultires/exsimulframetest.m
+END
+makesignalnus.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/sanskrit/!svn/ver/29/code/getFeature/waveletkernelmultires/makesignalnus.m
+END

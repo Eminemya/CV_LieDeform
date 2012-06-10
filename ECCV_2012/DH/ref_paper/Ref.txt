@@ -1,0 +1,29 @@
+1) MNIST:  http://yann.lecun.com/exdb/mnist/
+
+mnist_com: survey of state-of-art + hacky voting from top classifies...(overfitting the data)
+ocr_error: random paper classifying the types of error
+
+
+Though the ocr task is pure 2D/binary and the accuracy is quite high (99.7%), the fundamental problem remains unsolved:
+
+
+2) Representation: state-of-art methods overfitting the dataset by (implicitly) increasing training data and all fancy algos degenerate into KNN at the end.
+
+2.1) Discrimitive Model: (boosting/svm/cnn) artificial to ovefit whatever boundary/kernel to the nonlinear data
+
+2.2) Constellation Model: (stroke learning) hard to model and hard to get the best result with more data around
+
+2.3) Deformable Model:
+What if we just use small amount of the data? (several-shots learning, capturing the manifold with greated generality)
+
+congeal.pdf: try to module the space with global affine kernel
+shif_patch.pdf: local nonlinear perturbation by sliding window
+tangent_space.pdf: extend points to tangent space at the point
+shape_context.pdf: try to fit a thin-plate deformation model
+
+
+3) Speed: so far algos either slow to train (svm,cnn) or slow to test (knn)
+
+
+
+

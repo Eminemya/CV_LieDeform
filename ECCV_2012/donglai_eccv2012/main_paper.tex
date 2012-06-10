@@ -1,0 +1,47 @@
+\documentclass[runningheads]{llncs}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb} % define this before the line numbering.
+\usepackage{ruler}
+\usepackage{color}
+\usepackage[width=122mm,left=12mm,paperwidth=146mm,height=193mm,top=12mm,paperheight=217mm]{geometry}
+
+\usepackage{deform}
+
+\begin{document}
+% \renewcommand\thelinenumber{\color[rgb]{0.2,0.5,0.8}\normalfont\sffamily\scriptsize\arabic{linenumber}\color[rgb]{0,0,0}}
+% \renewcommand\makeLineNumber {\hss\thelinenumber\ \hspace{6mm} \rlap{\hskip\textwidth\ \hspace{6.5mm}\thelinenumber}}
+% \linenumbers
+\pagestyle{headings}
+\mainmatter
+\def\ECCV12SubNumber{385}  % Insert your submission number here
+
+\title{Learning Deformations with Parallel Transport} % Replace with your title
+
+\titlerunning{ECCV-12 submission ID \ECCV12SubNumber}
+
+\authorrunning{ECCV-12 submission ID \ECCV12SubNumber}
+
+\author{Anonymous ECCV submission}
+\institute{Paper ID \ECCV12SubNumber}
+
+
+\maketitle
+
+\input{abstract.tex}
+
+\input{introduction.tex}
+
+\input{review.tex}
+
+\input{theory.tex}
+
+\input{algorithm.tex}
+
+\input{experiments.tex}
+
+\input{conclusion.tex}
+
+\bibliographystyle{splncs}
+\bibliography{deform}
+
+\end{document}

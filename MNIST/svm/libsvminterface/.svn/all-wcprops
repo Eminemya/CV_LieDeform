@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/sanskrit/!svn/ver/29/code/getFeature/libsvminterface
+END
+mexSVMClass.dll
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/sanskrit/!svn/ver/29/code/getFeature/libsvminterface/mexSVMClass.dll
+END
+mexSVMTrain.mexglx
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/sanskrit/!svn/ver/29/code/getFeature/libsvminterface/mexSVMTrain.mexglx
+END
+mexSVMTrain.dll
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/sanskrit/!svn/ver/29/code/getFeature/libsvminterface/mexSVMTrain.dll
+END
+mexSVMClass.mexglx
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/sanskrit/!svn/ver/29/code/getFeature/libsvminterface/mexSVMClass.mexglx
+END
+svmvallib.m
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/sanskrit/!svn/ver/29/code/getFeature/libsvminterface/svmvallib.m
+END
+svmclasslib.m
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/sanskrit/!svn/ver/29/code/getFeature/libsvminterface/svmclasslib.m
+END

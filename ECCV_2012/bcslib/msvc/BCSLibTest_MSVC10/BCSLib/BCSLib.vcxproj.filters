@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\base">
+      <UniqueIdentifier>{bc8260bc-522d-45dc-9b4b-ff04a03a434d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\array">
+      <UniqueIdentifier>{1dfbe6c4-0a47-4eff-8134-f2cc1ea96b2c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\bcslib\base\arg_check.h">
+      <Filter>Header Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\bcslib\base\basic_algorithms.h">
+      <Filter>Header Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\bcslib\base\basic_defs.h">
+      <Filter>Header Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\bcslib\base\basic_math.h">
+      <Filter>Header Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\bcslib\base\basic_mem.h">
+      <Filter>Header Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\bcslib\base\basic_mem_alloc.h">
+      <Filter>Header Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\bcslib\base\block.h">
+      <Filter>Header Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\bcslib\base\config.h">
+      <Filter>Header Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\bcslib\base\iterator_wrappers.h">
+      <Filter>Header Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\bcslib\base\monitored_allocator.h">
+      <Filter>Header Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\bcslib\base\timer.h">
+      <Filter>Header Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\bcslib\base\tr1_imports.h">
+      <Filter>Header Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\bcslib\array\aindex.h">
+      <Filter>Header Files\array</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\bcslib\array\array1d.h">
+      <Filter>Header Files\array</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\bcslib\array\array2d.h">
+      <Filter>Header Files\array</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\bcslib\array\aview_base.h">
+      <Filter>Header Files\array</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\bcslib\array\aview_blas.h">
+      <Filter>Header Files\array</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\bcslib\array\aview1d.h">
+      <Filter>Header Files\array</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\bcslib\array\aview1d_base.h">
+      <Filter>Header Files\array</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\bcslib\array\aview1d_ops.h">
+      <Filter>Header Files\array</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\bcslib\array\aview2d.h">
+      <Filter>Header Files\array</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\bcslib\array\aview2d_base.h">
+      <Filter>Header Files\array</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\bcslib\array\aview2d_ops.h">
+      <Filter>Header Files\array</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\bcslib\array\aview2d_slices.h">
+      <Filter>Header Files\array</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\bcslib\array\transpose2d.h">
+      <Filter>Header Files\array</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

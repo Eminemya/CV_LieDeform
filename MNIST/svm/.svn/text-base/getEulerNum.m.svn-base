@@ -1,0 +1,5 @@
+function feature = getEulerNum( sample )
+
+feature = bweuler( sample);
+
+end

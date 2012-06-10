@@ -1,0 +1,22 @@
+clear; 
+clc;
+close all;
+
+load 'testingData/data.mat';
+
+feature = zeros(length(data),1);
+
+%% Parameters
+
+WIDTH = 14;
+THREC = 0.65 ;
+%% Extract Number of Horizontal Lines
+
+for i = 1 : length (data)
+    i = randi(length(data));
+    img = data{i};
+    proj = sum(img,2)/size( img,2);
+    numHLines = sum( (proj>THREC) )/WIDTH;
+    f
+    
+end

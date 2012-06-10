@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/sanskrit/!svn/ver/29/code/getFeature/AdaptScalSVM
+END
+gradwfixed.m
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/sanskrit/!svn/ver/29/code/getFeature/AdaptScalSVM/gradwfixed.m
+END
+gradwbfixed.m
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/sanskrit/!svn/ver/29/code/getFeature/AdaptScalSVM/gradwbfixed.m
+END
+SigmaUpdate.m
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/sanskrit/!svn/ver/29/code/getFeature/AdaptScalSVM/SigmaUpdate.m
+END
+costlfixed.m
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/sanskrit/!svn/ver/29/code/getFeature/AdaptScalSVM/costlfixed.m
+END
+svmfit.asv
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/sanskrit/!svn/ver/29/code/getFeature/AdaptScalSVM/svmfit.asv
+END
+costlbfixed.m
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/sanskrit/!svn/ver/29/code/getFeature/AdaptScalSVM/costlbfixed.m
+END
+svmfit.m
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/sanskrit/!svn/ver/29/code/getFeature/AdaptScalSVM/svmfit.m
+END
+gradlfixed.m
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/sanskrit/!svn/ver/29/code/getFeature/AdaptScalSVM/gradlfixed.m
+END
+gradlbfixed.m
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/sanskrit/!svn/ver/29/code/getFeature/AdaptScalSVM/gradlbfixed.m
+END
+ExampleFeatSelAdaptScal.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/sanskrit/!svn/ver/29/code/getFeature/AdaptScalSVM/ExampleFeatSelAdaptScal.m
+END
+ExampledemoAdaptScal.m
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/sanskrit/!svn/ver/29/code/getFeature/AdaptScalSVM/ExampledemoAdaptScal.m
+END
+costwfixed.m
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/sanskrit/!svn/ver/29/code/getFeature/AdaptScalSVM/costwfixed.m
+END
+costwbfixed.m
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/sanskrit/!svn/ver/29/code/getFeature/AdaptScalSVM/costwbfixed.m
+END
+svmfitconj.m
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/sanskrit/!svn/ver/29/code/getFeature/AdaptScalSVM/svmfitconj.m
+END
+LagrangeUpdate.m
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/sanskrit/!svn/ver/29/code/getFeature/AdaptScalSVM/LagrangeUpdate.m
+END

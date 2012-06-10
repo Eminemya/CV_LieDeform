@@ -1,0 +1,31 @@
+We thank the reviewers for their detailed and very helpful comments.
+
+Related Work
+************
+We thank R2 and R3 for pointing out work which proposes related, but distinct, ways of modeling deformation and we are happy to cite these papers.  
+
+As R2 points out, Bookstein's Then-Plate Spline deformation model and Liu and Ribeiro's meshless deformation model are related in terms of the idea of the decomposition of deformation.
+While Arsigny et al. describes the log Euclidean metric where operations form Lie group, we here effectively learn the Lie Algebraic basis of the 2D vector field representing the deformation.
+
+As R3 points out, in this work we constrain ourselves to 2D deformation model while assuming simple appearance model. In future work, we may consider adding occlussion and lighting to model real 3D world deformation.
+
+Algorithms
+***********
+The core of the algorithm is to learn the parallel transported local basis to build the structured manifold. However, we have to use two external algorithms to preprocess the data: K-medoid clustering algorithm to find suitable number of examplars and optical flow algorithm to approximate the parallel transport between examplars. 
+
+As all the reviewers point out, different settings and performance of the above two external algorithms will definitely affect the effectiveness of learning deformation.
+Especially, different number of examplars will trade off differently between the quality of learned local deformation and the quality of parallel transport.
+Since our focus is to show the power of parallel transporting local deformation with a fixed reasonable number of examplars instead of pushing down the error rate to extreme, we only empirically set the number of examplars.
+
+Experiments
+***********
+
+
+
+Others
+***********
+We thank all reviewers for their kind suggestions on typos and figure format for clearer presentation.
+Regarding to R3's questions, we'd like to clarify some confusions due to bad wording:
+* In K-medoid algorithm, we use L2 norm which gives reasonable result empirically
+* For the labels of x-axis in figure 3 and figure 5, "number of local component" should be number of training examples. 
+Also, the x-axis of the rightmost data points should be the average size of the original training data per digit (~6000) instead of 10,000.

@@ -1,0 +1,23 @@
+function y=key_para2(nummm,opttt)
+load hoho
+
+ll=mod(nummm,10);
+kk=(nummm-ll)/10;
+
+if(opttt==0)
+%0th order
+eval(['tmp=IDM7(test' num2str(kk) ''',train' num2str(ll) ''');']);
+
+elseif(opttt==1)
+
+eval(['tmp=IDM8(stest' num2str(kk) '(1:end/2,:)'',stest' num2str(kk) '(end/2+1:end,:)'',strain' num2str(ll) '(1:end/2,:)'',strain' num2str(ll) '(end/2+1:end,:)'');']);
+
+else
+a=1;
+
+end 
+
+
+eval(['save ' num2str(opttt)  'dis_' num2str(kk) '_' num2str(ll) ' tmp'])
+end
+

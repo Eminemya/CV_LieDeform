@@ -1,0 +1,9 @@
+D0:train: pixel
+D1:strain:sobel
+D2:ctrain:corner
+D3:etrain:canny
+D4:rtrain:pca rotate
+D5:part,sobel
+
+
+mex mtd.c td.h td.c ortho.c ortho.h

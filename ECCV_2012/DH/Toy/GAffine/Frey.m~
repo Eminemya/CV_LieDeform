@@ -1,0 +1,144 @@
+load frey_rawface
+face=double(ff)/255;
+
+%see(reshape(face(:,1),20,28))
+
+colormap gray
+
+mean(sum(bsxfun(@minus,face,face(:,1)).^2,1))
+
+numtrain=1465;
+numtest=500;
+train=randsample(1965,numtrain);
+test= setdiff(1:1965,train);
+
+%{
+r_thres = 3;
+glabel=train(2:1465);%size(face,2);
+cc=[train(1)];
+cindex={};
+while(length(glabel)>0)
+    % imadjust...
+    ratio=sum(bsxfun(@minus,face(:,glabel),face(:,cc(end))).^2,1);
+    %[aa,bb]=max(ratio);
+    next=findnext2(ratio,r_thres);
+    if(max(ratio)<=r_thres)
+        %done
+        cindex{length(cc)}=glabel;
+        glabel=[];
+    else
+        ind2=find(ratio<=r_thres);
+        cindex{length(cc)}=glabel(ind2);
+        cc=[cc,glabel(next)];
+        glabel([next,ind2])=[];
+    end
+    [length(cc),length(glabel),length(ind2)]
+end
+
+if length(cc)>length(cindex)
+    cindex{length(cc)}=[];
+end
+%}
+
+K=100;
+[IDX, C] = kmeans(face(:,train)', K);
+[aa,bb] = histc(IDX,1:K);
+%i=20;see2(find(IDX==i),face(:,train));
+face_r = zeros(1140,numtrain);
+for i = 1 : numtrain
+    tmp = padarray( reshape(face(:,train(i)),20,28) , [5 5]);    
+    face_r(:,i) = tmp(:);
+end
+face_t = zeros(1140,numtest);
+for i = 1 : numtest
+    tmp = padarray( reshape(face(:,test(i)),20,28) , [5 5]);    
+    face_t(:,i) = tmp(:);
+end
+
+
+
+ctrs=zeros(1,K);
+
+dd=pdist2(C,C);
+thres=2.5;
+for i = 1 : K
+    ind = find (IDX==i);
+    [~ , pos ] = min(sum(bsxfun(@minus,face(:,train(ind)),C(i,:)').^2,1));
+    ctrs(i) = ind(pos);
+end
+
+
+alpha = 0.01;
+ratio = 0.5;
+minWidth = 7;
+nOuterFPIterations = 7;
+nInnerFPIterations = 1;
+nSORIterations = 30;
+para = [alpha,ratio,minWidth,nOuterFPIterations,nInnerFPIterations,nSORIterations];
+
+Bs = cell(1,K);
+Alpha = cell(1,K);
+p = 0.9;
+tol = 1e-2;
+maxiter = 1000;
+for i = 1 : K
+    seed = [i, setdiff(find(dd(i,:)<thres),i) ];
+    dset.ns = length(seed);
+    dset.siz = [30 38];
+    dset.data = struct([]);
+
+    for j = 1 : dset.ns
+        ind = setdiff(find(IDX==seed(j)),ctrs(seed(j)));
+        dset.data(j).n = length(ind);
+        if j ==1
+            tmp1 = reshape(face_r(:,ctrs(seed(i))),dset.siz);
+        else
+            tmp1 = Coarse2FineTwoFrames2( reshape(face_r(:,ctrs(seed(j))),30,38), reshape(face_r(:,ctrs(i)),30,38),para);
+        end
+        dset.data(j).seed = tmp1(:);
+        dset.data(j).nbs = zeros(1140,length(ind));
+        dset.data(j).Vx = zeros(1140,length(ind));
+        dset.data(j).Vy = zeros(1140,length(ind));
+        dset.data(j).w = ones(1,length(ind));        
+        for k = 1 : length(ind)
+            tmp2= Coarse2FineTwoFrames2( reshape(face_r(:,ind(k)),30,38), reshape(face_r(:,ctrs(i)),30,38),para);
+            dset.data(j).nbs(:,k) = tmp2(:);
+            [vx,vy] = Coarse2FineTwoFrames2( tmp1, tmp2,para);
+            dset.data(j).Vx(:,k) = vx(:);
+            dset.data(j).Vy(:,k) = vy(:);
+        end
+    end
+    [B0, evs] = dm_init_basis(dset, p);
+    [Bs{i}, Alpha{i}] = dm_train(dset, B0, maxiter, tol);
+
+end
+
+
+%%
+%L2 test
+dis_l2 = min(pdist2(face_r,face_t));
+
+%TD:
+dis_mat= zeros(numtrain,numtest);
+for i = 1 : numtrain
+    proj=mtd(face_t,face_r(:,i));    
+    dis_mat(i,:) =  sum((proj-face_t).^2,1);
+end
+dis_lt = min(dis_mat);
+
+%CM:
+dis_lt = zeros(1,numtest);
+dis_mat= zeros(K,numtest);
+for i = 1 : numtest
+    for j = 1 : K
+        warp=dm_solve(Bs{j},face_r(:,j),face_t(:,i));    
+        dis_mat(j,i) =  sum(warp-face_t(:,i).^2,1);
+    end
+end
+dis_lm = min(dis_mat);
+
+
+
+
+
+

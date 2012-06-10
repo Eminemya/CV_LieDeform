@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BCSLib", "BCSLib\BCSLib.vcxproj", "{EB727525-306A-4161-9918-15D4B744C2D8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_basics", "test_basics\test_basics.vcxproj", "{A1A5D358-96B2-4545-BC90-43FC540BA21E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_array_basics", "test_array_basics\test_array_basics.vcxproj", "{0FC93287-D376-46BE-A695-110271ACE6C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB727525-306A-4161-9918-15D4B744C2D8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EB727525-306A-4161-9918-15D4B744C2D8}.Debug|Win32.Build.0 = Debug|Win32
+		{EB727525-306A-4161-9918-15D4B744C2D8}.Release|Win32.ActiveCfg = Release|Win32
+		{EB727525-306A-4161-9918-15D4B744C2D8}.Release|Win32.Build.0 = Release|Win32
+		{A1A5D358-96B2-4545-BC90-43FC540BA21E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A1A5D358-96B2-4545-BC90-43FC540BA21E}.Debug|Win32.Build.0 = Debug|Win32
+		{A1A5D358-96B2-4545-BC90-43FC540BA21E}.Release|Win32.ActiveCfg = Release|Win32
+		{A1A5D358-96B2-4545-BC90-43FC540BA21E}.Release|Win32.Build.0 = Release|Win32
+		{0FC93287-D376-46BE-A695-110271ACE6C1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0FC93287-D376-46BE-A695-110271ACE6C1}.Debug|Win32.Build.0 = Debug|Win32
+		{0FC93287-D376-46BE-A695-110271ACE6C1}.Release|Win32.ActiveCfg = Release|Win32
+		{0FC93287-D376-46BE-A695-110271ACE6C1}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

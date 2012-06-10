@@ -1,0 +1,19 @@
+function feature = getXYStatistics( sample )
+
+feature = zeros(4,1) ; 
+    for  i = 1 : size(sample,1)
+        for j = 1 : size(sample,2)
+            feature(1) = feature(1) + sample(i,j)*i; % i mean
+            feature(2) = feature(2) + sample(i,j)*j; % j mean
+            feature(3) = feature(3) + sample(i,j)*i*i ; % i^2 mean
+            feature(4) = feature(4) + sample(i,j)*j*j ; % j^2 mean
+            
+        end
+    end
+    
+    feature = feature/sum( sample(:));
+    feature(1) = feature(1)/size(sample,1);
+    feature(2) = feature(2)/size(sample,2);
+    feature(3) = ( feature(3)/size(sample,1)/size(sample,1) - feature(1)^2 )^0.5;
+    feature(4) = ( feature(4)/size(sample,2)/size(sample,2) - feature(2)^2 )^0.5;
+end

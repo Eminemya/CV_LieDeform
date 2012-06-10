@@ -1,0 +1,539 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/sanskrit/!svn/ver/29/code/getFeature
+END
+testClassifier.m
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/sanskrit/!svn/ver/29/code/getFeature/testClassifier.m
+END
+getTemplatesResp.m
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/sanskrit/!svn/ver/29/code/getFeature/getTemplatesResp.m
+END
+svmclassL2LS.m
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/sanskrit/!svn/ver/29/code/getFeature/svmclassL2LS.m
+END
+trainingData.mat
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/sanskrit/!svn/ver/29/code/getFeature/trainingData.mat
+END
+monqp.m
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/sanskrit/!svn/ver/29/code/getFeature/monqp.m
+END
+svmclassLS.m
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/sanskrit/!svn/ver/29/code/getFeature/svmclassLS.m
+END
+sanskritGUI.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/sanskrit/!svn/ver/29/code/getFeature/sanskritGUI.m
+END
+license.txt
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/sanskrit/!svn/ver/29/code/getFeature/license.txt
+END
+svmmulticlass.m
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/sanskrit/!svn/ver/29/code/getFeature/svmmulticlass.m
+END
+selectData.asv
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/sanskrit/!svn/ver/29/code/getFeature/selectData.asv
+END
+monqpCinfty.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/sanskrit/!svn/ver/29/code/getFeature/monqpCinfty.m
+END
+svmval.m
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/sanskrit/!svn/ver/29/code/getFeature/svmval.m
+END
+svmmulticlassoneagainstall.m
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/sanskrit/!svn/ver/29/code/getFeature/svmmulticlassoneagainstall.m
+END
+datasets.m
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/sanskrit/!svn/ver/29/code/getFeature/datasets.m
+END
+selectData.m
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/sanskrit/!svn/ver/29/code/getFeature/selectData.m
+END
+getXYStatistics.m
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/sanskrit/!svn/ver/12/code/getFeature/getXYStatistics.m
+END
+getFeatures.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/sanskrit/!svn/ver/17/code/getFeature/getFeatures.m
+END
+trainClassifier.asv
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/sanskrit/!svn/ver/29/code/getFeature/trainClassifier.asv
+END
+svmmulticlassoneagainstone.m
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/sanskrit/!svn/ver/29/code/getFeature/svmmulticlassoneagainstone.m
+END
+rnval.m
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/sanskrit/!svn/ver/29/code/getFeature/rnval.m
+END
+getEdgeNum.m
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/sanskrit/!svn/ver/12/code/getFeature/getEdgeNum.m
+END
+svmclassL2.m
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/sanskrit/!svn/ver/29/code/getFeature/svmclassL2.m
+END
+systemEval.asv
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/sanskrit/!svn/ver/29/code/getFeature/systemEval.asv
+END
+tensorwavkernel.m
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/sanskrit/!svn/ver/29/code/getFeature/tensorwavkernel.m
+END
+waveletspan.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/sanskrit/!svn/ver/29/code/getFeature/waveletspan.m
+END
+svmclassnpa.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/sanskrit/!svn/ver/29/code/getFeature/svmclassnpa.m
+END
+svmclass.m
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/sanskrit/!svn/ver/29/code/getFeature/svmclass.m
+END
+kernelpcaproj.m
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/sanskrit/!svn/ver/29/code/getFeature/kernelpcaproj.m
+END
+rncalc.m
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/sanskrit/!svn/ver/29/code/getFeature/rncalc.m
+END
+svmregLS.m
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/sanskrit/!svn/ver/29/code/getFeature/svmregLS.m
+END
+testing.mat
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/sanskrit/!svn/ver/29/code/getFeature/testing.mat
+END
+makeData_2classes.asv
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/sanskrit/!svn/ver/29/code/getFeature/makeData_2classes.asv
+END
+makeData.asv
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/sanskrit/!svn/ver/29/code/getFeature/makeData.asv
+END
+svmkernel.m
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/sanskrit/!svn/ver/29/code/getFeature/svmkernel.m
+END
+makeData.m
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/sanskrit/!svn/ver/29/code/getFeature/makeData.m
+END
+getArea.m
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/sanskrit/!svn/ver/12/code/getFeature/getArea.m
+END
+getTemplate01.asv
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/sanskrit/!svn/ver/29/code/getFeature/getTemplate01.asv
+END
+classifier.mat
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/sanskrit/!svn/ver/29/code/getFeature/classifier.mat
+END
+getTemplate02.asv
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/sanskrit/!svn/ver/29/code/getFeature/getTemplate02.asv
+END
+givrot.m
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/sanskrit/!svn/ver/29/code/getFeature/givrot.m
+END
+getTemplate03.asv
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/sanskrit/!svn/ver/29/code/getFeature/getTemplate03.asv
+END
+getTemplate02.m
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/sanskrit/!svn/ver/29/code/getFeature/getTemplate02.m
+END
+getTemplate04.m
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/sanskrit/!svn/ver/29/code/getFeature/getTemplate04.m
+END
+testClassifier.asv
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/sanskrit/!svn/ver/29/code/getFeature/testClassifier.asv
+END
+svmmultival.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/sanskrit/!svn/ver/29/code/getFeature/svmmultival.m
+END
+getTemplatesResp.asv
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/sanskrit/!svn/ver/29/code/getFeature/getTemplatesResp.asv
+END
+regsolve.m
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/sanskrit/!svn/ver/29/code/getFeature/regsolve.m
+END
+LPsvmclass.m
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/sanskrit/!svn/ver/29/code/getFeature/LPsvmclass.m
+END
+gda.m
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/sanskrit/!svn/ver/29/code/getFeature/gda.m
+END
+dataset1.mat
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/sanskrit/!svn/ver/29/code/getFeature/dataset1.mat
+END
+dataset2.mat
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/sanskrit/!svn/ver/29/code/getFeature/dataset2.mat
+END
+classifiers.mat
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/sanskrit/!svn/ver/29/code/getFeature/classifiers.mat
+END
+functioneval.m
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/sanskrit/!svn/ver/29/code/getFeature/functioneval.m
+END
+dataset3.mat
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/sanskrit/!svn/ver/29/code/getFeature/dataset3.mat
+END
+contents.m
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/sanskrit/!svn/ver/29/code/getFeature/contents.m
+END
+svmoneclassval.m
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/sanskrit/!svn/ver/29/code/getFeature/svmoneclassval.m
+END
+svmregL2.m
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/sanskrit/!svn/ver/29/code/getFeature/svmregL2.m
+END
+fileaccess.m
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/sanskrit/!svn/ver/29/code/getFeature/fileaccess.m
+END
+getVerticalLineNum.m
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/sanskrit/!svn/ver/12/code/getFeature/getVerticalLineNum.m
+END
+phispan.m
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/sanskrit/!svn/ver/29/code/getFeature/phispan.m
+END
+svmreg.m
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/sanskrit/!svn/ver/29/code/getFeature/svmreg.m
+END
+kernelpca.m
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/sanskrit/!svn/ver/29/code/getFeature/kernelpca.m
+END
+svmnureg.m
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/sanskrit/!svn/ver/29/code/getFeature/svmnureg.m
+END
+cout.m
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/sanskrit/!svn/ver/29/code/getFeature/cout.m
+END
+getFeatures.asv
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/sanskrit/!svn/ver/29/code/getFeature/getFeatures.asv
+END
+getHorizontalLineNum.asv
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/sanskrit/!svn/ver/29/code/getFeature/getHorizontalLineNum.asv
+END
+data2.mat
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/sanskrit/!svn/ver/29/code/getFeature/data2.mat
+END
+getHorizontalLineNum.m
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/sanskrit/!svn/ver/12/code/getFeature/getHorizontalLineNum.m
+END
+getEdgeNum.asv
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/sanskrit/!svn/ver/29/code/getFeature/getEdgeNum.asv
+END
+trainClassifier.m
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/sanskrit/!svn/ver/29/code/getFeature/trainClassifier.m
+END
+kernelset.m
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/sanskrit/!svn/ver/29/code/getFeature/kernelset.m
+END
+getEulerNum.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/sanskrit/!svn/ver/12/code/getFeature/getEulerNum.m
+END
+systemEval.m
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/sanskrit/!svn/ver/29/code/getFeature/systemEval.m
+END
+testingData.mat
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/sanskrit/!svn/ver/29/code/getFeature/testingData.mat
+END
+spanestimate.m
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/sanskrit/!svn/ver/29/code/getFeature/spanestimate.m
+END
+svmoneclass.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/sanskrit/!svn/ver/29/code/getFeature/svmoneclass.m
+END
+data.mat
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/sanskrit/!svn/ver/29/code/getFeature/data.mat
+END
+svmmultivaloneagainstone.m
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/sanskrit/!svn/ver/29/code/getFeature/svmmultivaloneagainstone.m
+END
+svmnuclass.m
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/sanskrit/!svn/ver/29/code/getFeature/svmnuclass.m
+END
+r2smallestsphere.m
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/sanskrit/!svn/ver/29/code/getFeature/r2smallestsphere.m
+END
+LPsvmreg.m
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/sanskrit/!svn/ver/29/code/getFeature/LPsvmreg.m
+END
+normalizekernel.m
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/sanskrit/!svn/ver/29/code/getFeature/normalizekernel.m
+END
+getArea.asv
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/sanskrit/!svn/ver/29/code/getFeature/getArea.asv
+END
+makeData_2classes.m
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/sanskrit/!svn/ver/29/code/getFeature/makeData_2classes.m
+END
+sanskritGUI.fig
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/sanskrit/!svn/ver/29/code/getFeature/sanskritGUI.fig
+END
+getTemplate01.m
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/sanskrit/!svn/ver/29/code/getFeature/getTemplate01.m
+END
+getHWRatio.m
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/sanskrit/!svn/ver/12/code/getFeature/getHWRatio.m
+END
+waveletfunction.m
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/sanskrit/!svn/ver/29/code/getFeature/waveletfunction.m
+END
+getTemplate03.m
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/sanskrit/!svn/ver/29/code/getFeature/getTemplate03.m
+END

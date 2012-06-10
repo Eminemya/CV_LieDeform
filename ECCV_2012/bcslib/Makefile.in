@@ -1,0 +1,252 @@
+# The make file for BCSLib
+
+# compiler configuration
+
+#------ platform-specific options -----------
+
+CXX=@cxx@
+
+WARNING_FLAGS = @warning_flags@
+BOOST_WARNING_FLAGS = @boost_warning_flags@
+CPPFLAGS = @cppflags@
+CXXFLAGS = $(CPPFLAGS) @cxxflags@
+OFLAGS = @oflags@ 
+
+USE_INTEL = "yes"
+
+ifndef GTEST_HOME
+$(error GTEST_HOME is not defined)
+endif
+
+MAIN_TEST_PRE=-isystem $(GTEST_HOME)/include test/bcs_test_main.cpp
+MAIN_TEST_POST=$(GTEST_HOME)/lib/@gtestlib_main@ -lpthread
+
+CUDA_TEST_PRE=-isystem $(GTEST_HOME)/include test/bcs_test_main.cpp
+CUDA_TEST_POST=$(GTEST_HOME)/lib/@gtestlib_cuda@ -lpthread
+
+
+ifeq ($(USE_INTEL), "yes")
+    INTEL_PATHS = @intel_paths@
+    INTEL_LINKS = @intel_links@
+    INTEL_FLAGS = -DHAS_INTEL_MKL -DHAS_INTEL_IPP $(INTEL_PATHS) $(INTEL_LINKS)
+endif
+
+
+#------ Output directory ----------
+
+TEST_BIN_DIR = bin
+BENCH_BIN_DIR = bin
+
+#------ Header groups ----------
+
+BASE_HEADERS = \
+	bcslib/base/config.h \
+	bcslib/base/basic_defs.h \
+	bcslib/base/arg_check.h \
+	bcslib/base/basic_math.h \
+	bcslib/base/key_map.h \
+	bcslib/base/smart_ptr.h \
+	bcslib/base/tr1_containers.h \
+	bcslib/base/type_traits.h \
+	bcslib/base/alt_structure.h \
+	bcslib/base/basic_algorithms.h \
+	bcslib/base/iterator_wrappers.h \
+	bcslib/base/basic_mem_alloc.h \
+	bcslib/base/basic_mem.h \
+	bcslib/base/block.h \
+	bcslib/base/monitored_allocator.h \
+	bcslib/base/timer.h
+
+ARRAY_BASIC_HEADERS = $(BASE_HEADERS) \
+	bcslib/array/aview_base.h \
+	bcslib/array/aindex.h \
+	bcslib/array/aview1d_base.h \
+	bcslib/array/aview1d.h \
+	bcslib/array/aview1d_ops.h \
+	bcslib/array/array1d.h \
+	bcslib/array/amap.h \
+	bcslib/array/aview2d_base.h \
+	bcslib/array/aview2d_slices.h \
+	bcslib/array/aview2d.h \
+	bcslib/array/aview2d_ops.h \
+	bcslib/array/transpose2d.h \
+	bcslib/array/array2d.h
+	
+LINALG_HEADERS = $(ARRAY_BASIC_HEADERS) \
+	bcslib/extern/blas_select.h \
+	bcslib/array/aview_blas.h
+	
+DATASTRUCT_BASIC_HEADERS = $(BASE_HEADERS) \
+	bcslib/data_structs/hash_accumulator.h \
+	bcslib/data_structs/binary_heap.h \
+	bcslib/data_structs/disjoint_sets.h
+		
+GRAPH_BASIC_HEADERS = $(BASE_HEADERS) \
+	bcslib/graph/gview_base.h \
+	bcslib/graph/gedgelist_view.h \
+	bcslib/graph/ginclist_view.h \
+	bcslib/graph/ginclist.h
+	
+GRAPH_ALGORITHM_HEADERS = $(GRAPH_BASIC_HEADERS) \
+	bcslib/graph/graph_traversal.h \
+	bcslib/graph/graph_shortest_paths.h \
+	bcslib/graph/graph_minimum_span_trees.h
+
+
+#---------- Target groups -------------------
+
+.PHONY: all
+all: test bench
+
+.PHONY: test
+test: test_basics test_array test_data_structs test_graph
+
+.PHONY: bench
+bench: bench_array
+
+.PHONY: clean
+
+ifeq ($(TEST_BIN_DIR), $(BENCH_BIN_DIR))
+clean:
+	-rm $(TEST_BIN_DIR)/*
+else
+clean:
+	-rm $(TEST_BIN_DIR)/* $(BENCH_BIN_DIR)/*
+endif
+
+
+#------ Basic tests ----------
+
+.PHONY: test_basics
+test_basics: $(TEST_BIN_DIR)/test_basics
+
+
+#------ Array tests (declaration) -----------
+
+.PHONY: test_array
+.PHONY: bench_array	
+
+test_array: \
+	$(TEST_BIN_DIR)/test_array_basics
+	
+test_array_pending: \
+	$(TEST_BIN_DIR)/test_array_comp \
+	$(TEST_BIN_DIR)/test_array_comp_intel \
+	$(TEST_BIN_DIR)/test_linalg_intel
+
+bench_array: \
+	$(BENCH_BIN_DIR)/bench_array_access
+	
+	
+#------ Data struct tests (declaration) -----------	
+	
+.PHONY: test_data_structs
+
+test_data_structs: \
+	$(TEST_BIN_DIR)/test_data_struct_basics	
+	
+	
+#------ Graph tests (declaration) -----------
+
+.PHONY: test_graph
+
+test_graph: \
+	$(TEST_BIN_DIR)/test_graph_basics \
+	$(TEST_BIN_DIR)/test_graph_algorithms
+
+
+
+#_________________________________________________________________________
+#
+#  BELOW ARE DETAILS!
+#
+
+#----------------------------------------------------------
+#
+#   Basics test (details)
+#
+#----------------------------------------------------------
+
+
+TEST_BASICS_SOURCES = \
+	test/test_basic_concepts.cpp \
+	test/test_basic_algorithms.cpp \
+	test/test_basic_memory.cpp \
+	
+$(TEST_BIN_DIR)/test_basics: $(BASE_HEADERS) $(TEST_BASICS_SOURCES)
+	$(CXX) $(CXXFLAGS) $(MAIN_TEST_PRE) $(TEST_BASICS_SOURCES) $(MAIN_TEST_POST) -o $@
+
+
+#----------------------------------------------------------
+#
+#   Array test & bench (details)
+#
+#----------------------------------------------------------
+
+# array tests
+
+TEST_ARRAY_BASICS_SOURCES = \
+	test/test_aindex.cpp \
+	test/test_array1d.cpp \
+	test/test_array2d.cpp \
+	test/test_array_transpose.cpp
+			
+$(TEST_BIN_DIR)/test_array_basics: $(ARRAY_BASIC_HEADERS) $(TEST_ARRAY_BASICS_SOURCES) 
+	$(CXX) $(CXXFLAGS) $(MAIN_TEST_PRE) $(TEST_ARRAY_BASICS_SOURCES) $(MAIN_TEST_POST) -o $@
+	
+TEST_LINALG_SOURCES = \
+	test/test_array_blas.cpp
+
+$(TEST_BIN_DIR)/test_linalg_intel: $(LINALG_HEADERS) $(ARRAY_TEST_HEADERS) $(TEST_LINALG_SOURCES)
+	$(CXX) $(CXXFLAGS) $(MAIN_TEST_PRE) $(INTEL_FLAGS) $(TEST_LINALG_SOURCES) $(MAIN_TEST_POST) -o $@
+
+# array bench
+
+$(BENCH_BIN_DIR)/bench_array_access: $(ARRAY_BASIC_HEADERS) bench/bench_array_access.cpp
+	$(CXX) $(CXXFLAGS) $(OFLAGS) bench/bench_array_access.cpp -o $@
+			
+$(BENCH_BIN_DIR)/bench_array_calc_intel: $(ARRAY_COMP_HEADERS) bench/bench_array_calc.cpp
+	$(CXX) $(CXXFLAGS) $(INTEL_FLAGS) $(OFLAGS) bench/bench_array_calc.cpp -o $@
+
+
+#----------------------------------------------------------
+#
+#   Data structure test & bench
+#
+#----------------------------------------------------------
+
+# Data structure tests
+
+TEST_DATASTRUCT_BASICS_SOURCES = \
+	test/test_binary_heap.cpp \
+	test/test_disjoint_sets.cpp
+
+$(TEST_BIN_DIR)/test_data_struct_basics: $(DATASTRUCT_BASIC_HEADERS) $(TEST_DATASTRUCT_BASICS_SOURCES)
+	$(CXX) $(CXXFLAGS) $(MAIN_TEST_PRE) $(TEST_DATASTRUCT_BASICS_SOURCES) $(MAIN_TEST_POST) -o $@
+
+
+
+#----------------------------------------------------------
+#
+#   Graph test & bench
+#
+#----------------------------------------------------------
+
+# Graph tests
+
+TEST_GRAPH_BASICS_SOURCES = \
+	test/test_gview_base.cpp \
+	test/test_gedgelist.cpp \
+	test/test_ginclist.cpp
+	
+TEST_GRAPH_ALGORITHMS_SOURCES = \
+	test/test_graph_traversal.cpp \
+	test/test_graph_shortest_paths.cpp \
+	test/test_graph_minimum_span_trees.cpp
+	
+$(TEST_BIN_DIR)/test_graph_basics: $(GRAPH_BASIC_HEADERS) $(TEST_GRAPH_BASICS_SOURCES)
+	$(CXX) $(CXXFLAGS) $(MAIN_TEST_PRE) $(TEST_GRAPH_BASICS_SOURCES) $(MAIN_TEST_POST) -o $@
+
+$(TEST_BIN_DIR)/test_graph_algorithms: $(GRAPH_ALGORITHM_HEADERS) $(TEST_GRAPH_ALGORITHMS_SOURCES)
+	$(CXX) $(CXXFLAGS) $(MAIN_TEST_PRE) $(TEST_GRAPH_ALGORITHMS_SOURCES) $(MAIN_TEST_POST) -o $@
+

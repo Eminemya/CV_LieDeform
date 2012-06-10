@@ -1,0 +1,32 @@
+Conventions:
+
+1) All image pixels are meant to represent a number from
+
+   0<=x<256.0
+
+   Note that no pixel should ever represent exactly 256, 
+   but it can be equal to 0.0.
+
+   For doubles, which is matlab's standard internal representation
+   for an array, the true value of a pixel is just the
+   array value.
+ 
+   For unsigned 8-bit values, only integers can be represented.
+   When converting to double from uint8, add a 0.5 to the value to obtain
+   the best estimate of the true pixel value.
+
+   When converting to double from a 1-bit representation:
+   0->0.5
+   1->255.5
+
+   Going the other way should be obvious.
+
+2) IO: All IO routines store values as uint8 by default (pgm) and
+   load values to doubles. I may write special load routines that
+   load to uint8 values to save memory. Haven't done it yet though.
+
+
+
+
+
+

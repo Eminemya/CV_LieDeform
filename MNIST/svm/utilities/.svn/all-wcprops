@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/sanskrit/!svn/ver/29/code/getFeature/utilities
+END
+knn.m
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/sanskrit/!svn/ver/29/code/getFeature/utilities/knn.m
+END
+kernelknn.m
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/sanskrit/!svn/ver/29/code/getFeature/utilities/kernelknn.m
+END
+VectorizeCofSVM.m
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/sanskrit/!svn/ver/29/code/getFeature/utilities/VectorizeCofSVM.m
+END
+CreateCVtoy.m
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/sanskrit/!svn/ver/29/code/getFeature/utilities/CreateCVtoy.m
+END
+ConfusionMatrix.m
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/sanskrit/!svn/ver/29/code/getFeature/utilities/ConfusionMatrix.m
+END
+nfcvreg.m
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/sanskrit/!svn/ver/29/code/getFeature/utilities/nfcvreg.m
+END
+lambdawilks.m
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/sanskrit/!svn/ver/29/code/getFeature/utilities/lambdawilks.m
+END
+CreateCVrealdata.m
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/sanskrit/!svn/ver/29/code/getFeature/utilities/CreateCVrealdata.m
+END
+nfcv.m
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/sanskrit/!svn/ver/29/code/getFeature/utilities/nfcv.m
+END
+CreateDataAppTestReg.m
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/sanskrit/!svn/ver/29/code/getFeature/utilities/CreateDataAppTestReg.m
+END
+CreateDataAppTest.m
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/sanskrit/!svn/ver/29/code/getFeature/utilities/CreateDataAppTest.m
+END
+normalizekernel.m
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/sanskrit/!svn/ver/29/code/getFeature/utilities/normalizekernel.m
+END
+wstat.m
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/sanskrit/!svn/ver/29/code/getFeature/utilities/wstat.m
+END
+mwustat.m
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/sanskrit/!svn/ver/29/code/getFeature/utilities/mwustat.m
+END
+normalizeinterval.m
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/sanskrit/!svn/ver/29/code/getFeature/utilities/normalizeinterval.m
+END
+DataGrid2D.m
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/sanskrit/!svn/ver/29/code/getFeature/utilities/DataGrid2D.m
+END
+normalizemeanstd.m
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/sanskrit/!svn/ver/29/code/getFeature/utilities/normalizemeanstd.m
+END

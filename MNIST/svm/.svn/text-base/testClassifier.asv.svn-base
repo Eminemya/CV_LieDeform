@@ -1,0 +1,35 @@
+
+
+result
+
+load C:\Users\yichangshih\Desktop\sanskrit\newdata\test.mat;
+data = imgs;
+load C:\Users\yichangshih\Desktop\sanskrit\newdata\group.mat;
+
+[Testing Group_gnd] = getFeatures(data);
+
+%-----------------------------------------------------
+%   Learning and Learning Parameters
+c = 1000;
+lambda = 1e-7;
+kerneloption= 2;
+kernel='poly';
+verbose = 0;
+nbclass = 5 ; 
+
+%--------------------------------------------------
+%
+
+matlabpool close;
+matlabpool(8);
+
+
+load classifiers;
+for sample = 1 : length(data)
+    xsup = classifiers(coarseLabel(i)).xsup;
+    w = classifiers(coarseLabel(i)).xsup;
+    b = classifiers(coarseLabel(i)).xsup;
+    nbsv = classifiers(coarseLabel(i)).xsup;
+
+    
+    [Group_test,maxi] = svmmultivaloneagainstone(Testing,xsup,w,b,nbsv, kernel ,kerneloption);

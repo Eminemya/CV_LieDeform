@@ -1,0 +1,44 @@
+close all;
+clc; 
+clear; 
+
+load C:\Users\yichangshih\Desktop\sanskrit\newdata\train\train.mat;
+data = imgs;
+load C:\Users\yichangshih\Desktop\sanskrit\newdata\group.mat;
+
+
+
+%-----------------------------------------------------
+%   Learning and Learning Parameters
+c = 1000;
+lambda = 1e-7;
+kerneloption= 2;
+kernel='poly';
+verbose = 0;
+
+
+for i = 1 : 65
+    i = 1 ; 
+    members = group(i,:);
+    group_data_num = 1 ;
+    for m = 1 : 5 
+        for d = 1 : length(data)
+            if (data(d).label == members(m))
+                groupData(group_data_num).img = data(d).img;
+                groupData(group_data_num).label = m;
+                groupData(group_data_num).originalLabel = members(m);
+                group_data_num = group_data_num + 1;
+            end
+        end
+    end
+    
+    [Training Group] = getFeatures(groupData);
+    [xsup,w,b,nbsv,classifier,pos]=svmmulticlassoneagainstone(Training,Group,nbclass,c,lambda,kernel,kerneloption,verbose);
+    classifiers(i).xsup = xsup;
+    classifiers(i).w = w;
+    classifiers(i).b = b;
+    classifiers(i).nbsv = nbsv;
+    classifiers(i).classifier = classifier;
+    classifiers(i). = pos
+end
+                

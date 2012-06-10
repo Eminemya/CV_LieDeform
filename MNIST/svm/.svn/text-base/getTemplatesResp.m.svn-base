@@ -1,0 +1,53 @@
+function feature = getTemplatesResp( sample )
+
+if( min(size(sample))<40)
+    sample = imresize( sample , 50/min(size(sample)));
+end
+
+samplelet{1} = sample(1: round(end/2), 1: round(end/2));
+samplelet{2} = sample(1: round(end/2), round(end/2): end);
+samplelet{3} = sample(round(end/2): end, round(end/2): end);
+samplelet{4} = sample(round(end/2): end, 1: round(end/2));
+
+templates(:,:,1) = getTemplate01();
+templates(:,:,2) = getTemplate02();
+templates(:,:,3) = getTemplate03();
+templates(:,:,4) = getTemplate04();
+
+mark{1} = '*r';
+mark{2} = '*g';
+mark{3} = '*b';
+mark{4} = '*c';
+
+feature = zeros(16,1);
+
+offset = round( size(sample))/2;
+
+%figure ; imshow( sample ) ; 
+%hold on 
+
+for s = 1 : 4
+    for t = 1 : 4         
+        matching = normxcorr2( templates(:,:,t) , samplelet{s} );
+        if(max(matching(:))>0.8)
+            
+            
+            %offsetT = size(templates)/2;
+            %[row col] = find( matching == max(matching(:) ));
+            %row = row - offsetT(1);
+            %col = col - offsetT(2);
+            %if(s==2) col = col + offset(2); 
+            %elseif(s==3) row = row + offset(1);  col = col + offset(2);
+            %elseif(s==4) row = row + offset(1);
+            %end
+            %plot( col , row , mark{t});
+            
+            feature( (s-1)*4 + t ) = 1;
+        end
+    end
+end
+ 
+%hold off
+
+end
+

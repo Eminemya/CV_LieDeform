@@ -1,0 +1,11 @@
+data_l2_0: reproduce MNIST with noisy trainining (309)
+data_l2_00: same with above without noisy trainining (310)
+data_l2_1: + Scaled/Shift Middle (341)
+data_l2_20: + rotated aligned (+-60)
+data_l2_21: + rotated aligned (+-45)
+data_l2_3: + shear aligned (+-60/+-0.5)
+
+
+
+
+data_lp9_2: (1220)

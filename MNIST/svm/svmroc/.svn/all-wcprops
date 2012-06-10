@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/sanskrit/!svn/ver/29/code/getFeature/svmroc
+END
+rankroccurve.m
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/sanskrit/!svn/ver/29/code/getFeature/svmroc/rankroccurve.m
+END
+svmroc.m
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/sanskrit/!svn/ver/29/code/getFeature/svmroc/svmroc.m
+END
+rankboostAUCOLD.m
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/sanskrit/!svn/ver/29/code/getFeature/svmroc/rankboostAUCOLD.m
+END
+rankboostAUC.m
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/sanskrit/!svn/ver/29/code/getFeature/svmroc/rankboostAUC.m
+END
+svmrocval.m
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/sanskrit/!svn/ver/29/code/getFeature/svmroc/svmrocval.m
+END
+OLDsvmroccurve.m
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/sanskrit/!svn/ver/29/code/getFeature/svmroc/OLDsvmroccurve.m
+END
+contents.m
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/sanskrit/!svn/ver/29/code/getFeature/svmroc/contents.m
+END
+rankboostAUCval.m
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/sanskrit/!svn/ver/29/code/getFeature/svmroc/rankboostAUCval.m
+END
+svmroccurve.m
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/sanskrit/!svn/ver/29/code/getFeature/svmroc/svmroccurve.m
+END
+svmrocCS.m
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/sanskrit/!svn/ver/29/code/getFeature/svmroc/svmrocCS.m
+END

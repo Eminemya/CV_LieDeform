@@ -1,0 +1,13 @@
+
+
+
+
+a=reshape(test5(540,:),28,28);
+a(a>0)=1;
+aa=bwmorph(a,'erode');
+imagesc(aa')
+
+
+
+aa=bwmorph(a,'shrink');
+imagesc(aa')

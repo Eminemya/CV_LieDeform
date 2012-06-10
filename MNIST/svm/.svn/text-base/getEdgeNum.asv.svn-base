@@ -1,0 +1,15 @@
+close all ; 
+clc; 
+clear;
+
+load 'testingData/data.mat';
+
+for i = 1 : length(data)
+    
+    sample = data{i};
+    
+    C = corner(sample ,  3 );
+    figure;  imshow(sample);
+    hold on
+    plot(C(:,1), C(:,2), 'r*');
+end

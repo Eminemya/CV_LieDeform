@@ -1,0 +1,17 @@
+function feature = getHorizontalLineNum( sample )
+
+%% Parameters
+
+WIDTH = 14;
+THREC = 0.65 ;
+%% Extract Number of Horizontal Lines
+
+img = sample;
+proj = sum(img,2)/size( img,2);
+    
+numHLines = sum( (proj>THREC) )/WIDTH;
+feature = numHLines;
+    
+
+
+end

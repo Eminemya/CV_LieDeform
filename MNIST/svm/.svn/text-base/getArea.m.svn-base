@@ -1,0 +1,8 @@
+function feature = getArea( sample )
+%GETAREA Summary of this function goes here
+%   Detailed explanation goes here
+
+    feature = sum(sample(:))/prod(size(sample));
+
+end
+

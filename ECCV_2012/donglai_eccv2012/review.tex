@@ -1,0 +1,61 @@
+\section{Related Work}
+\label{sec:review}
+
+We first briefly review previous work on deformations, which roughly
+fall into two categories.
+The first category of methods focuses on estimating global affine
+transformation. Frey and Jojic~\cite{TMG1,TMG2,TMG3} proposes a
+mixture model, where the space of affine transforms is discretized,
+and an indicator is used to choose a specific transform in generating
+each image.
+Miller~\etal~\cite{Congeal} proposed a nonparametric probabilistic
+model, which estimates the global affine transforms by gradually
+aligning the images, using a gradient descent method referred to as ``congealing''.
+
+The second category takes into account non-rigid deformations that can
+lead to changes in shapes. Cootes~\etal~\cite{AAM,JP} proposed the
+active appearance model for object alignment, where the deformation is
+represented via the displacement of pre-specified control points.  In
+addition, approaches by directly matching local descriptors are also
+widely used.  Belongie et al.~\cite{SC} developed a direct matching
+method using local shape context based on statistics of edges.  Keyser
+et al.~\cite{IDM} developed an Image Distortion Model
+(IDM)~\cite{IDM}, which pursues a dense match of local patches between
+two images as a representation of the deformation.  Though simple,
+this method leads to substantial improvement on character recognition,
+providing significant evidence as to the important role of local
+deformations in object recognition.  The pioneering work by
+Tenenbaum~etal~\cite{ISO} and Roweis and Saul~\cite{LLE} initiated a
+large amount of work that directly models the image manifold via
+embeddings it into local low-dimensional spaces.
+
+While deformation information is made use of in building object
+metrics in the work mentioned above, these methods do not establish
+an explicit model of deformations. Recently, new models have been
+proposed to address this issue.
+Simard et al.~\cite{TD} considered the manifold of deformations,
+approximating it via local tangent spaces. In this work, the
+basis of these tangent spaces are hand-crafted, with some apparent
+deformation patterns taken into account (\eg~rotation and changes of
+thickness). However, some subtle variations of shapes are difficult to
+capture via manually devised patterns.
+Another drawback of this method lies in the introduction of tangent
+spaces for all training samples, incurring unnecessary
+computational costs in both training and testing phases when the
+samples are dense.
+%
+Hastie and Simard~\cite{HTrevor,ATV} improve upon this method by
+grouping nearby samples into clusters and deriving the tangent basis
+via learning. However, learning is performed independently for each
+tangent space, utilizing only the samples within a local neighborhood.
+This makes it potentially difficult to obtain reliable estimations. 
+%%% Local Variables:
+%%% TeX-master: "main_paper"
+%%% End:
+
+
+
+
+
+
+

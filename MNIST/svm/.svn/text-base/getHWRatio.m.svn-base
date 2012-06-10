@@ -1,0 +1,8 @@
+function feature = getHWRatio( sample )
+%GETHWRATIO Summary of this function goes here
+%   Detailed explanation goes here
+
+feature = size(sample,1)/size(sample,2);
+
+end
+
